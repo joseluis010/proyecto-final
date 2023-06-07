@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+
+
+{% block content %}
+<h1>Búsqueda</h1>
+<a href="{% url 'home:index' %}" >Volver a Inicio</a>
+<br><br>
+
+<form method="post">
+    
+    {% csrf_token %}
+    {{ form.pais.label_tag }}
+    {{ form.pais }}
+    <br><br>
+    {{ form.ciudad.label_tag }}
+    {{ form.ciudad }}
+    <br><br>
+    <button type="submit">Buscar</button>
+</form>
+
+<!-- Mensaje si no hay calle en esa ciudad -->
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+{% if calles %}
+    <h3>Resultados de la búsqueda:</h3>
+    <ul>
+        {% for calle in calles %}
+        <div>  <h3 style="color: brown;">  {{ calle.nombre }} </h3> </div>
+        
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}
+

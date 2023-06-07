@@ -23,24 +23,33 @@
                              <li>
                                 <a href="{% url 'home:about' %}">NOSOTROS</a>
                              </li>
+                           
                              <li>
-                                <a href="">Marketing</a>
+                                <a href="{% url 'home:buscar' %}">Buscar</a>
                              </li>
+                             {% if user.is_authenticated %}
                              <li>
-                                <a href="blog.html">Blog</a>
-                             </li>
-                             <li>
-                                <a href="contact.html">Contact us</a>
-                             </li>
+                              <a href="{% url 'home:agregar' %}">Agregar</a>
+                           </li>
+                           <li>
+                              <a href="{% url 'home:logout' %}">Logout</a>
+                           </li>
+                           <li>
+                              <a href="#"><img src="{% static 'home/images/search_icon.png' %}" alt="lupa" /></a>
+                           </li>
+                           <li>
+                              {{ messages  }}
+                           </li>
+                           
+                            {% else %}
                              <li>
                                 <a href="{% url 'home:login' %}">Login</a>
                              </li>
                              <li>
                                 <a href="{% url 'home:register' %}">Register</a>
                              </li>
-                             <li>
-                                <a href="#"><img src="{% static 'home/images/search_icon.png' %}" alt="lupa" /></a>
-                             </li>
+                             {% endif %}
+                             
                           </ul>
                        </nav>
                     </div>
@@ -49,5 +58,9 @@
            </div>
         </div>
         <!-- end header inner -->
+
+    
+
+
      </header>
      <!-- end header -->

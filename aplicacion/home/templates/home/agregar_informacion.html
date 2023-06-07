@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %}
+
+
+
+
+
+{% block content %}
+<h1 style="color: brown;">Agregar Información</h1>
+<a href="{% url 'home:index' %}" class="btn btn-primary">Volver a Inicio</a>
+<br><br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar</button>
+</form>
+ <br><br>
+ 
+{% if messages %}
+<div class="alert alert-danger mt-3">
+    <ul>
+        {% for message in messages %}
+       <h3 style="color: blue;"> {{ message }} </h3>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock content %}

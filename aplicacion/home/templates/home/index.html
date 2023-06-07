@@ -3,37 +3,11 @@
 
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-  
-   <!-- body -->
-   <body class="main-layout">
    
+{% if messages %}{{ messages }}{% endif %}
+        
 
-      <!-- revolution slider -->
-      <div class="banner-slider">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-7">
-                  <div id="slider_main" class="carousel slide" data-ride="carousel">
-                     <!-- The slideshow -->
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <img src="{% static 'home/images/slider_1.png' %}" alt="#" />
-                        </div>
-                        <div class="carousel-item">
-                           <img src="{% static 'home/images/slider_1.png' %}" alt="#" />
-                        </div>
-                     </div>
-                     <!-- Left and right controls -->
-                     <a class="carousel-control-prev" href="#slider_main" data-slide="prev">
-                     <i class="fa fa-angle-left" aria-hidden="true"></i>
-                     </a>
-                     <a class="carousel-control-next" href="#slider_main" data-slide="next">
-                     <i class="fa fa-angle-right" aria-hidden="true"></i>
-                     </a>
-                  </div>
-               </div>
+
                <div class="col-md-5">
                   <div class="full slider_cont_section">
                      <h4>More Featured in</h4>
