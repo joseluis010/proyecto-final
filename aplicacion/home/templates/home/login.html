@@ -1,12 +1,17 @@
 {% extends 'home/base.html' %}
+{% load static %}
+
 
 {% block content %}
-    <p>Pagina de login</p>
-    <p><a href="{% url 'home:about' %}" class="btn btn-primary">Acerca</a></p>
-    <p><a href="{% url 'home:index' %}" class="btn btn-primary">Inicio</a></p>
 
-
-
-
+    <form method="post">
+        <div class="d-grid gap-3">
+        {% csrf_token %}
+        {{ form.as_p }}
+        </div>
+        <div class="d-grid gap-3">
+            <button type="submit" class="btn btn-success">Iniciar sesión</button>
+        </div>
+    </form>
 
 {% endblock content %}

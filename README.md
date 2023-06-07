@@ -26,3 +26,6 @@ MEDIA_URL = "/media/"
 
 
 2- urls principal y de home, hecho en 
+
+
+3- ya se creo rama-2
