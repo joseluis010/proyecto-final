@@ -23,3 +23,17 @@ class CustomAuthenticationForm(AuthenticationForm):
             "username": forms.TextInput(attrs={"class": "form-control"}),
             "password": forms.PasswordInput(attrs={"class": "form-control"}),
         }
+
+
+
+from django import forms
+from .models import Pais, Ciudad
+
+class AgregarInformacionForm(forms.Form):
+    pais = forms.CharField(label='País', max_length=100)
+    ciudad = forms.CharField(label='Ciudad', max_length=100)
+    calle = forms.CharField(label='Calle', max_length=100)
+
+class BuscarForm(forms.Form):
+    pais = forms.CharField(label='País', max_length=100)
+    ciudad = forms.CharField(label='Ciudad', max_length=100)

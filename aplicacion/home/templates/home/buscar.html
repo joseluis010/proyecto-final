@@ -3,8 +3,8 @@
 
 {% block content %}
 <h1>Búsqueda</h1>
-<a href="{% url 'home:index' %}" >Volver a Inicio</a>
-<br><br>
+
+
 
 <form method="post">
     
@@ -16,6 +16,7 @@
     {{ form.ciudad }}
     <br><br>
     <button type="submit">Buscar</button>
+
 </form>
 
 <!-- Mensaje si no hay calle en esa ciudad -->
@@ -32,10 +33,11 @@
     <h3>Resultados de la búsqueda:</h3>
     <ul>
         {% for calle in calles %}
-        <div>  <h3 style="color: brown;">  {{ calle.nombre }} </h3> </div>
+    <li>  <div>  <h3 style="color: brown; text-align: center; transform:scale(500px, 50px) ;">  {{ calle.nombre }} </h3> </div>  </li>
         
         {% endfor %}
-    </ul>
+    </ul> 
+     <div  style="color: brown; text-align: center; transform:scale(500px, 50px) ;"> {{ map|safe }}   </div>
 {% endif %}
 {% endblock %}
 

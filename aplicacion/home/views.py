@@ -1,6 +1,8 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 
+import folium
+
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages 
 from django.http import HttpRequest, HttpResponse
@@ -65,7 +67,8 @@ def buscar(request):
             
             calles = models.Calle.objects.filter(ciudad__nombre=ciudad, ciudad__pais__nombre=pais)
             if calles:
-                return render(request, 'home/buscar.html', {'calles': calles})
+                initialMap = folium.Map(location = [-34.90590178924003, -56.185210539997854], zoom_start=9)
+                return render(request, 'home/buscar.html', {'calles': calles, 'map': initialMap._repr_html_()})
             else:
                 messages.info(request, 'No se encontraron calles en la ciudad buscada.')
         
