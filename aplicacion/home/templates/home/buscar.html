@@ -1,7 +1,10 @@
 {% extends 'home/base.html' %}
-
+{% load static %}
 
 {% block content %}
+<body style="background-color: crimson;">
+    
+</body>
 <h1>Búsqueda</h1>
 
 
@@ -31,13 +34,15 @@
 
 {% if calles %}
     <h3>Resultados de la búsqueda:</h3>
-    <ul>
+    
         {% for calle in calles %}
-    <li>  <div>  <h3 style="color: brown; text-align: center; transform:scale(500px, 50px) ;">  {{ calle.nombre }} </h3> </div>  </li>
+      <div>
+        <img src="{% static 'home/images/location_icon.png' %}" alt="#" />
+        <p style="color: brown;">  {{ calle.nombre }} </p> </div>  
         
         {% endfor %}
-    </ul> 
-     <div  style="color: brown; text-align: center; transform:scale(500px, 50px) ;"> {{ map|safe }}   </div>
+    
+     <div  style="color: brown; transform:scale(500px, 50px) ;"> {{ map|safe }}   </div>
 {% endif %}
 {% endblock %}
 
