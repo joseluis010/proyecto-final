@@ -34,14 +34,14 @@
     skeleton
 ---------------------------------------------------------------------*/
 
-body {
+/* body {
 	color: #666666;
 	font-size: 14px;
 	font-family: 'poppins', sans-serif;
 	line-height: 1.80857;
 	font-weight: normal;
 	overflow-x: hidden;
-}
+} */
 
 a {
 	color: #1f1f1f;
@@ -1946,7 +1946,7 @@ input[type="radio"] .styled:checked+label::after {
 footer {
     background: #0f0824;
     min-height: 50px;
-    padding: 90px 0;
+    padding: 9px 0;
 }
 
 .footer_links h3 {
