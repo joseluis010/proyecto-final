@@ -1,13 +1,12 @@
 {% extends 'home/base.html' %}
-
+{% load static %}
 
 
 
 
 {% block content %}
 <h1 style="color: brown;">Agregar Información</h1>
-<a href="{% url 'home:index' %}" class="btn btn-primary">Volver a Inicio</a>
-<br><br>
+
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -26,4 +25,6 @@
     </ul>
 </div>
 {% endif %}
+<img src="{% static 'home/images/turista.png' %}" alt="#" />
+
 {% endblock content %}

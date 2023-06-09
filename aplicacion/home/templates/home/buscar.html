@@ -24,9 +24,12 @@
 
 </form>
 
+
+
+
 <!-- Mensaje si no hay calle en esa ciudad -->
 {% if messages %}
-    <ul class="messages">
+    <ul class="alert alert-danger mt-3">
         {% for message in messages %}
             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
         {% endfor %}
@@ -46,5 +49,7 @@
     
      <div  style="color: brown; transform:scale(500px, 50px) ;"> {{ map|safe }}   </div>
 {% endif %}
+
+<img src="{% static 'home/images/bath.png' %}" alt="#" />
 {% endblock %}
 
