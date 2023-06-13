@@ -10,10 +10,7 @@
              <div class="aboutheading">
                 <h3>LOG<span class="orange_color">IN</span></h3>
              </div>
-          </div>
-       </div>
-    </div>
- </div>
+    
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
@@ -23,5 +20,8 @@
     </form>
 
     <img src="{% static 'home/images/turista.png' %}" alt="#" />
-    
+   </div>
+</div>
+</div>
+</div> 
 {% endblock content %}

@@ -1,8 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
-
 import folium
-
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages 
 from django.http import HttpRequest, HttpResponse
