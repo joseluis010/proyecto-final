@@ -141,14 +141,4 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#! Login
 
-
-LOGIN_URL = reverse_lazy("home:login")
-LOGIN_REDIRECT_URL = reverse_lazy("home:index")
-
-
-#! Media
-
-MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_URL = "/media/"
