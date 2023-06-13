@@ -5,7 +5,23 @@
 
 
 {% block content %}
-<h1 style="color: brown;">Agregar Información</h1>
+</body>
+<div class="About-bg">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="aboutheading">
+                <h3>AGREGAR <span class="orange_color">INFORMACIÓN</span></h3>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <div class="About-bg">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
 
 <form method="post">
     {% csrf_token %}
@@ -25,6 +41,15 @@
     </ul>
 </div>
 {% endif %}
+
+
 <img src="{% static 'home/images/turista.png' %}" alt="#" />
+
+</div>
+</div>
+</div>
+</div>
+
+
 
 {% endblock content %}

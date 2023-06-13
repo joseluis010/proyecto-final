@@ -31,4 +31,4 @@ MEDIA_URL = "/media/"
 3- ya se creo rama-2
 
 
-hay que instalar el modulo pip install folium
+hay que instalar el modulo: pip install folium

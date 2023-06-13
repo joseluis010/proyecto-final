@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.models import User
+from .models import Pais, Ciudad
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -26,8 +27,7 @@ class CustomAuthenticationForm(AuthenticationForm):
 
 
 
-from django import forms
-from .models import Pais, Ciudad
+
 
 class AgregarInformacionForm(forms.Form):
     pais = forms.CharField(label='País', max_length=100)

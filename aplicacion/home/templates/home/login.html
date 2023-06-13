@@ -3,7 +3,17 @@
 
 
 {% block content %}
-
+<div class="About-bg">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="aboutheading">
+                <h3>LOG<span class="orange_color">IN</span></h3>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}

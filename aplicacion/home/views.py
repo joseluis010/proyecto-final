@@ -13,7 +13,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from . import forms, models
 
 
-# Create your views here.
+
 
 def index(request):
     return render(request, "home/index.html")
@@ -23,11 +23,7 @@ def about(request):
     return render(request, "home/about.html")
 
 
-# def login(request):
-#     return render(request, "home/login.html")
 
-
-# @staff_member_required
 def register(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
         form = forms.CustomUserCreationForm(request.POST)
@@ -70,7 +66,7 @@ def buscar(request):
                 initialMap = folium.Map(location = [-34.90590178924003, -56.185210539997854], zoom_start=9)
                 return render(request, 'home/buscar.html', {'calles': calles, 'map': initialMap._repr_html_()})
             else:
-                messages.info(request, 'No se encontraron calles en la ciudad buscada.')
+                messages.info(request, 'No se encontraron baños en la ciudad buscada.')
         
     else:
         form = forms.BuscarForm()
@@ -105,4 +101,3 @@ def agregar_informacion(request):
         form = forms.AgregarInformacionForm()
 
     return render(request, 'home/agregar_informacion.html', {'form': form})
-
