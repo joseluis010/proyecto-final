@@ -26,17 +26,11 @@ Este proyecto es una aplicación web para buscar y agregar información sobre ba
 
 
 
-1 - en settings  agregar esto  
 
-
-- STATIC_URL = "static/"
-- STATICFILES_DIRS = [BASE_DIR / "static"]
 
 
 2- hay que instalar el modulo: pip install folium para poder importar el mapa
 
-
-3- 
 
 
 ## Paso a Paso
@@ -48,6 +42,13 @@ Este proyecto es una aplicación web para buscar y agregar información sobre ba
 º python manage.py migrate
 
 º python manage.py runserver
+
+- En settings  agregar esto  
+
+
+ ºSTATIC_URL = "static/"
+
+ ºSTATICFILES_DIRS = [BASE_DIR / "static"]
 
 - Hay que instalar el modulo: pip install folium para poder importar el mapa
 
