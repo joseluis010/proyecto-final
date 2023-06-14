@@ -26,13 +26,6 @@ Este proyecto es una aplicación web para buscar y agregar información sobre ba
 
 
 
-
-
-
-2- hay que instalar el modulo: pip install folium para poder importar el mapa
-
-
-
 ## Paso a Paso
 
 - Al clonar en git primero debemos ejecutar estos 3 comandos :
