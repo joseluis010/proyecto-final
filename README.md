@@ -115,8 +115,10 @@ Tengo 9 templates:
 
 
  ## Cosas a mejorar
-Me hubiera gustado mejorar la plantilla de Bootstrap, pero no comprendí bien esa área, cuando intentaba hacer cambios me daba error mi programa, por eso es que no lo continué.
+- Me hubiera gustado mejorar la plantilla de Bootstrap, pero no comprendí bien esa área, cuando intentaba hacer cambios me daba error mi programa, por eso es que no lo continué.
 
-La parte de formularios me costó bastante entender, tanto el código que hay que agregar en el html como en el controlador, por eso no avancé a desarrollar LAS VISTAS BASADAS EN CLASES. Hubo mucho de copia y pego y aún intentando buscar la info, no he logrado entenderlo.
+- La parte de formularios me costó bastante entender, tanto el código que hay que agregar en el html como en el controlador, por eso no avancé a desarrollar LAS VISTAS BASADAS EN CLASES. Hubo mucho de copia y pego y aún intentando buscar la info, no he logrado entenderlo.
 
-Me costó entender como usar estilos en un archivo .py y .html, algunos pude usar pero buscando info en otras fuentes.
+- Me costó entender como usar estilos en un archivo .py y .html, algunos pude usar pero buscando info en otras fuentes.
+
+- Aprender a manipular el mapa del menú BUSQUEDA, para que muestre la ubicación de las calles.
