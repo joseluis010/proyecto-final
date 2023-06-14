@@ -81,13 +81,15 @@ En aplicaciones/home/views.py tenemos 6 funciones:
 - About La explicacion acerca de nosotros, 
 - Otras 2 para agregar informacion sobre los baños y para buscar calles que tengan baños:
 
+
 º nos pide agregar el país y la ciudad, si hay calles creadas nos muestra todas. º si no hay calles creadas nos devuelve un mensaje de que no se encontraron calles 
 - 2 últimas para registrarse y loguearse
 
 En aplicaciones/home/admin.py
-creo los campos en admin: Pais, Ciudad y Calle en el superusercreate pusimos: admin y pass: 1234
+creo los campos en admin: Pais, Ciudad y Calle en el superusercreate pusimos: admin y pass: 1234.
 
-Tengo 9 templates:
+
+## Tengo 9 templates:
 
  º  base.html 
 
